@@ -17,4 +17,13 @@ public class Comment {
     @JoinColumn(name = "post_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Post post;
+
+    public Comment() {
+    }
+
+    public Comment(int id, String message, Post post) {
+        this.id = id;
+        this.message = message;
+        this.post = post;
+    }
 }
