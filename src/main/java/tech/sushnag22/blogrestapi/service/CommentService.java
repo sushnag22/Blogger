@@ -24,9 +24,25 @@ public class CommentService {
     public List<Comment> getAllCommentsByPostId(int postid, Pageable page){
         return commentRepository.findByPostId(postid, page).getContent();
     }
+
+    public Comment getCommentById(int id) {
+        return commentRepository.findById(id).get();
+    }
+
     public void save(Comment comment,int postid){
         Post p = postService.getPostById(postid);
         comment.setPost(p);
         commentRepository.save(comment);
     }
+
+    public void delete(int id){
+        commentRepository.deleteById(id);
+    }
+
+    public void update(Comment comment,int id){
+        Comment c = getCommentById(id);
+        c.setMessage(comment.getMessage());
+        commentRepository.save(c);
+    }
+
 }
