@@ -31,4 +31,11 @@ public class PostController {
         return post;
     }
 
+    // Updates a post with a given id
+    @PutMapping("/posts/{postid}")
+    private String updatePost(@RequestBody Post post,@PathVariable("postid") int postid){
+        postService.update(post,postid);
+        return "Post with id "+postid+" updated";
+    }
+
 }
