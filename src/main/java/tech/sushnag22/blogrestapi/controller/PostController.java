@@ -34,15 +34,15 @@ public class PostController {
     // Updates a post with a given id
     @PutMapping("/posts/{postid}")
     private String updatePost(@RequestBody Post post,@PathVariable("postid") int postid){
-        postService.update(post,postid);
-        return "Post with id "+postid+" updated";
+        postService.update(post, postid);
+        return "Post with id " + postid + " updated";
     }
 
     //Deletes a post with a given id
     @DeleteMapping("/posts/{postid}")
     private String deletePost(@PathVariable("postid") int postid){
         postService.delete(postid);
-        return "Post with id "+postid+" deleted";
+        return "Post with id " + postid + " deleted";
     }
 
 }
