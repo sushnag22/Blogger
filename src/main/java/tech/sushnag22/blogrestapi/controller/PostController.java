@@ -38,4 +38,11 @@ public class PostController {
         return "Post with id "+postid+" updated";
     }
 
+    //Deletes a post with a given id
+    @DeleteMapping("/posts/{postid}")
+    private String deletePost(@PathVariable("postid") int postid){
+        postService.delete(postid);
+        return "Post with id "+postid+" deleted";
+    }
+
 }
