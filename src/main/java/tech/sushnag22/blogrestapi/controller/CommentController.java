@@ -15,12 +15,25 @@ public class CommentController {
 
     @GetMapping("/posts/{postid}/comments")
     private List<Comment> getAllComments(@PathVariable("postid") int postid, Pageable page){
-        return commentService.getAllCommentsByPostId(postid,page);
+        return commentService.getAllCommentsByPostId(postid, page);
     }
 
     @PostMapping("/posts/{postid}/comments")
     private Comment saveComment(@RequestBody Comment comment, @PathVariable("postid") int postid){
-        commentService.save(comment,postid);
+        commentService.save(comment, postid);
         return comment;
     }
+
+    @PutMapping("/posts/{postid}/comments{commentid}")
+    private String updateComment(@RequestBody Comment comment, @PathVariable("postid") int postid){
+        commentService.update(comment, postid);
+        return "Comment with id " + postid + " updated";
+    }
+
+    @DeleteMapping("/posts/{postid}/comments/{commentid}")
+    private String deleteComment(@PathVariable("postid") int postid){
+        commentService.delete(postid);
+        return "Comment with id " + postid + " deleted";
+    }
+
 }
