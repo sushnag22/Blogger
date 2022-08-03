@@ -18,4 +18,9 @@ public class CommentController {
         return commentService.getAllCommentsByPostId(postid,page);
     }
 
+    @PostMapping("/posts/{postid}/comments")
+    private Comment saveComment(@RequestBody Comment comment, @PathVariable("postid") int postid){
+        commentService.save(comment,postid);
+        return comment;
+    }
 }
