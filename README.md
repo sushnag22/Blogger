@@ -1,22 +1,22 @@
 # REST API for a Blog
-A REST API for a blog built with Spring Boot and Java.
+A REST API for a blog built with Spring Boot and Java. PostgreSQL is used as the database to store the blog posts and the comments to a post.
 
 The two entities with their attributes are:
 1. `post` entity with attributes - 
 
-      i. id
+      i. `id`
   
-      ii. title
+      ii. `title`
 
-      iii. content
+      iii. `content`
 
 2. `comment` entity with attributes -
 
-      i. id
+      i. `id`
       
-      ii. post_id
+      ii. `post_id`
       
-      iii. message
+      iii. `message`
 
 The endpoints for posts are:
 
