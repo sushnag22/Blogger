@@ -1,7 +1,7 @@
 # REST API for a Blog
 A REST API for a blog built with Spring Boot and Java. PostgreSQL is used as the database to store the blog posts and the comments to a post.
 
-The two entities with their attributes are:
+The two entities are:
 1. `post` entity with attributes - 
 
       i. `id`
@@ -24,7 +24,7 @@ The endpoints for posts are:
 2. GET : /posts - Get all the blog posts.
 3. GET : /posts/id - Get a blog post by id.
 4. PUT : /posts/id - Updates a blog post with the given id.
-5. DELETE : /posts/id - Delete a blog post with given id
+5. DELETE : /posts/id - Delete a blog post with given id.
 
 The endpoints for comments are:
 
