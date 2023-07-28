@@ -1,5 +1,5 @@
 # REST API for a Blog
-A REST API for a blog built with Spring Boot and Java. PostgreSQL is used as the database to store the blog posts and the comments to a post. https://rest-api-for-a-blog.herokuapp.com/
+A REST API for a blog built with Spring Boot and Java. PostgreSQL is used as the database to store the blog posts and the comments to a post.
 
 The two entities are:
 1. `post` entity with attributes - 
