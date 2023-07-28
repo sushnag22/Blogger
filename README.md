@@ -33,4 +33,4 @@ The endpoints for comments are:
 3. PUT : /posts/postid/comments - Updates the comment to a blog post with given id.
 4. DELETE : /posts/postid/comments/id - Deletes the comment to a blog post with given id.
 
-Postman Collection: https://www.getpostman.com/collections/c353730e183f7c06b3a4
+Postman Collection: https://api.postman.com/collections/17404613-7f51f8b7-5dd4-4958-adc4-47ec686f4db9?access_key=PMAT-01H6DSK8CSMQMHT41A19SQMY5K
